@@ -1,0 +1,103 @@
+
+import React from 'react';
+import { FileText, Mic, BookOpen, Briefcase, Users, Zap } from 'lucide-react';
+
+const ServicesSection = () => {
+  const services = [
+    {
+      icon: FileText,
+      title: "Document Translation",
+      description: "Professional translation of legal, medical, technical, and business documents with certified accuracy.",
+      features: ["Legal Documents", "Medical Reports", "Technical Manuals", "Business Contracts"]
+    },
+    {
+      icon: Mic,
+      title: "Interpretation Services",
+      description: "Real-time interpretation for meetings, conferences, and events with skilled interpreters.",
+      features: ["Conference Interpretation", "Business Meetings", "Medical Interpretation", "Court Interpretation"]
+    },
+    {
+      icon: BookOpen,
+      title: "Academic Translation",
+      description: "Specialized translation for academic papers, research, and educational materials.",
+      features: ["Research Papers", "Academic Texts", "Thesis Translation", "Educational Content"]
+    },
+    {
+      icon: Briefcase,
+      title: "Business Solutions",
+      description: "Comprehensive language support for international business expansion and communication.",
+      features: ["Marketing Materials", "Website Localization", "Business Communication", "International Expansion"]
+    },
+    {
+      icon: Users,
+      title: "Training & Consultation",
+      description: "Language training programs and consultation services for organizations and individuals.",
+      features: ["Language Training", "Cultural Consultation", "Communication Workshops", "Linguistic Analysis"]
+    },
+    {
+      icon: Zap,
+      title: "Express Services",
+      description: "Fast-track translation and interpretation services for urgent requirements.",
+      features: ["24-hour Delivery", "Rush Orders", "Emergency Interpretation", "Urgent Documents"]
+    }
+  ];
+
+  return (
+    <section id="services" className="py-20 bg-gradient-to-br from-gray-50 to-primary/5">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16 animate-fade-in-up">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Our <span className="text-secondary">Services</span>
+          </h2>
+          <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Comprehensive linguistic solutions tailored to meet your specific needs, 
+            from individual documents to large-scale international projects.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <div 
+              key={index}
+              className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 animate-fade-in-up"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center mb-6 animate-float">
+                <service.icon className="w-8 h-8 text-white" />
+              </div>
+              
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
+              <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
+              
+              <ul className="space-y-2">
+                {service.features.map((feature, featureIndex) => (
+                  <li key={featureIndex} className="flex items-center text-sm text-gray-700">
+                    <div className="w-2 h-2 bg-secondary rounded-full mr-3 animate-pulse-gentle"></div>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              
+              <button className="mt-6 w-full py-3 border-2 border-primary text-primary font-semibold rounded-lg hover:bg-primary hover:text-white transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center mt-16">
+          <div className="bg-white rounded-2xl p-8 shadow-lg inline-block animate-float-delayed">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Need a Custom Solution?</h3>
+            <p className="text-gray-600 mb-6">We also provide tailored linguistic services for unique requirements.</p>
+            <button className="px-8 py-3 bg-secondary text-white font-semibold rounded-full hover:bg-secondary/90 transition-all duration-300 transform hover:scale-105">
+              Contact Us Today
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ServicesSection;
