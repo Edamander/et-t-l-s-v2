@@ -45,10 +45,9 @@ const AboutSection = () => {
           {features.map((feature, index) => (
             <div 
               key={index}
-              className="text-center p-6 rounded-xl bg-gradient-to-br from-primary/5 to-secondary/5 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 animate-float"
-              style={{ animationDelay: `${index * 0.2}s` }}
+              className="text-center p-6 rounded-xl bg-gradient-to-br from-primary/5 to-secondary/5 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:animate-float group"
             >
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors group-hover:animate-pulse-gentle">
                 <feature.icon className="w-8 h-8 text-primary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
@@ -72,9 +71,9 @@ const AboutSection = () => {
                 <span className="px-4 py-2 bg-white/20 rounded-full text-sm font-medium">Timely Delivery</span>
               </div>
             </div>
-            <div className="relative">
-              <div className="w-full h-64 bg-white/10 rounded-xl backdrop-blur-sm flex items-center justify-center animate-float-delayed">
-                <Globe className="w-24 h-24 text-white opacity-60" />
+            <div className="relative group">
+              <div className="w-full h-64 bg-white/10 rounded-xl backdrop-blur-sm flex items-center justify-center group-hover:animate-float-delayed transition-all duration-300">
+                <Globe className="w-24 h-24 text-white opacity-60 group-hover:animate-pulse-gentle" />
               </div>
             </div>
           </div>

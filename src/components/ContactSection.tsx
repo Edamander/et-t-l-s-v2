@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
 
@@ -52,10 +51,9 @@ const ContactSection = () => {
               {contactInfo.map((contact, index) => (
                 <div 
                   key={index}
-                  className="flex items-start space-x-4 p-4 rounded-lg bg-white shadow-md hover:shadow-lg transition-all duration-300 animate-float"
-                  style={{ animationDelay: `${index * 0.1}s` }}
+                  className="flex items-start space-x-4 p-4 rounded-lg bg-white shadow-md hover:shadow-lg transition-all duration-300 hover:animate-float group"
                 >
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors group-hover:animate-pulse-gentle">
                     <contact.icon className="w-6 h-6 text-primary" />
                   </div>
                   <div>
@@ -67,7 +65,7 @@ const ContactSection = () => {
               ))}
             </div>
 
-            <div className="mt-8 p-6 bg-gradient-to-r from-primary to-primary/80 rounded-xl text-white animate-float-delayed">
+            <div className="mt-8 p-6 bg-gradient-to-r from-primary to-primary/80 rounded-xl text-white hover:animate-float-delayed transition-all duration-300 group">
               <h4 className="text-xl font-bold mb-4">Why Choose ET Linguistic?</h4>
               <ul className="space-y-2 text-sm opacity-90">
                 <li>• Professional certified translators</li>
@@ -83,6 +81,7 @@ const ContactSection = () => {
           <div className="animate-fade-in-up">
             <h3 className="text-2xl font-bold text-gray-900 mb-8">Send us a Message</h3>
             <form className="space-y-6">
+              
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">First Name</label>
