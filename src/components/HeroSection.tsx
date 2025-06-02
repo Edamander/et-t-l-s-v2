@@ -11,14 +11,25 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative bg-gradient-to-br from-primary/5 via-white to-secondary/10">
-      {/* Floating decorative elements */}
-      <div className="absolute top-1/4 left-1/4 w-4 h-4 bg-secondary rounded-full animate-float opacity-60"></div>
-      <div className="absolute top-1/3 right-1/3 w-6 h-6 bg-primary rounded-full animate-float-delayed opacity-40"></div>
-      <div className="absolute bottom-1/3 left-1/5 w-3 h-3 bg-secondary rounded-full animate-pulse-gentle opacity-50"></div>
-      <div className="absolute top-1/2 right-1/4 w-5 h-5 bg-primary rounded-full animate-float opacity-30"></div>
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-primary/5 via-white to-secondary/10">
+      {/* Background Geometric Shapes */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Large decorative circles */}
+        <div className="absolute -top-32 -right-32 w-96 h-96 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-gradient-to-br from-secondary/20 to-secondary/10 rounded-full blur-3xl"></div>
+        
+        {/* Medium floating shapes */}
+        <div className="absolute top-1/4 left-1/4 w-24 h-24 bg-secondary/30 rounded-full animate-float opacity-60"></div>
+        <div className="absolute top-1/3 right-1/3 w-32 h-32 bg-primary/20 rounded-full animate-float-delayed opacity-40"></div>
+        <div className="absolute bottom-1/3 left-1/5 w-16 h-16 bg-secondary/40 rounded-full animate-pulse-gentle opacity-50"></div>
+        <div className="absolute top-1/2 right-1/4 w-20 h-20 bg-primary/30 rounded-full animate-float opacity-30"></div>
+        
+        {/* Geometric polygons */}
+        <div className="absolute top-20 left-1/3 w-0 h-0 border-l-[30px] border-r-[30px] border-b-[52px] border-l-transparent border-r-transparent border-b-secondary/20 animate-float opacity-40"></div>
+        <div className="absolute bottom-20 right-1/3 w-12 h-12 bg-primary/20 transform rotate-45 animate-float-delayed opacity-30"></div>
+      </div>
 
-      <div className="text-center max-w-4xl mx-auto px-4 animate-fade-in-up">
+      <div className="text-center max-w-4xl mx-auto px-4 animate-fade-in-up relative z-10">
         <div className="mb-6 animate-float">
           <span className="inline-block px-4 py-2 bg-secondary/20 text-secondary font-semibold rounded-full text-sm mb-4">
             Professional Linguistic Services
@@ -54,7 +65,7 @@ const HeroSection = () => {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
         <ChevronDown 
           className="w-6 h-6 text-primary cursor-pointer"
           onClick={() => scrollToSection('about')}

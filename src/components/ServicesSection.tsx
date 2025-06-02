@@ -43,8 +43,24 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-gradient-to-br from-gray-50 to-primary/5">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="services" className="py-20 bg-gradient-to-br from-gray-50 to-primary/5 relative overflow-hidden">
+      {/* Background Design Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Large curved background shapes */}
+        <div className="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-r from-primary/5 to-secondary/10 transform -skew-y-1"></div>
+        <div className="absolute bottom-0 right-0 w-full h-1/3 bg-gradient-to-l from-secondary/5 to-primary/10 transform skew-y-1"></div>
+        
+        {/* Floating geometric shapes */}
+        <div className="absolute top-20 right-1/4 w-20 h-20 bg-secondary/20 rounded-full blur-sm"></div>
+        <div className="absolute bottom-32 left-1/4 w-16 h-16 bg-primary/20 transform rotate-45 blur-sm"></div>
+        
+        {/* Wave pattern */}
+        <svg className="absolute top-1/2 left-0 w-full opacity-5" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#116F59"></path>
+        </svg>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Our <span className="text-secondary">Services</span>
@@ -60,10 +76,13 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <div 
               key={index}
-              className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 animate-fade-in-up"
+              className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 animate-fade-in-up relative overflow-hidden"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center mb-6 animate-float">
+              {/* Card background decoration */}
+              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-full transform translate-x-10 -translate-y-10"></div>
+              
+              <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center mb-6 animate-float relative z-10">
                 <service.icon className="w-8 h-8 text-white" />
               </div>
               
@@ -87,12 +106,16 @@ const ServicesSection = () => {
         </div>
 
         <div className="text-center mt-16">
-          <div className="bg-white rounded-2xl p-8 shadow-lg inline-block animate-float-delayed">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Need a Custom Solution?</h3>
-            <p className="text-gray-600 mb-6">We also provide tailored linguistic services for unique requirements.</p>
-            <button className="px-8 py-3 bg-secondary text-white font-semibold rounded-full hover:bg-secondary/90 transition-all duration-300 transform hover:scale-105">
-              Contact Us Today
-            </button>
+          <div className="bg-white rounded-2xl p-8 shadow-lg inline-block animate-float-delayed relative overflow-hidden">
+            {/* Decorative background for CTA */}
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-secondary/5 opacity-50"></div>
+            <div className="relative z-10">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Need a Custom Solution?</h3>
+              <p className="text-gray-600 mb-6">We also provide tailored linguistic services for unique requirements.</p>
+              <button className="px-8 py-3 bg-secondary text-white font-semibold rounded-full hover:bg-secondary/90 transition-all duration-300 transform hover:scale-105">
+                Contact Us Today
+              </button>
+            </div>
           </div>
         </div>
       </div>

@@ -27,8 +27,29 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-20 bg-white relative overflow-hidden">
+      {/* Background Design Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Large background shapes */}
+        <div className="absolute -top-20 -left-20 w-80 h-80 bg-gradient-to-br from-primary/10 to-primary/5 rounded-full blur-2xl"></div>
+        <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-gradient-to-br from-secondary/15 to-secondary/5 rounded-full blur-2xl"></div>
+        
+        {/* Decorative hexagons */}
+        <div className="absolute top-1/4 right-10 w-16 h-16 bg-secondary/10 transform rotate-12 rounded-lg"></div>
+        <div className="absolute bottom-1/4 left-10 w-12 h-12 bg-primary/15 transform -rotate-12 rounded-lg"></div>
+        
+        {/* Floating dots pattern */}
+        <div className="absolute top-32 left-1/3 grid grid-cols-3 gap-2 opacity-20">
+          <div className="w-2 h-2 bg-primary rounded-full"></div>
+          <div className="w-2 h-2 bg-secondary rounded-full"></div>
+          <div className="w-2 h-2 bg-primary rounded-full"></div>
+          <div className="w-2 h-2 bg-secondary rounded-full"></div>
+          <div className="w-2 h-2 bg-primary rounded-full"></div>
+          <div className="w-2 h-2 bg-secondary rounded-full"></div>
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             About <span className="text-primary">ET Linguistic</span>
@@ -56,8 +77,14 @@ const AboutSection = () => {
           ))}
         </div>
 
-        <div className="bg-gradient-to-r from-primary to-primary/80 rounded-2xl p-8 md:p-12 text-white animate-fade-in-up">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div className="bg-gradient-to-r from-primary to-primary/80 rounded-2xl p-8 md:p-12 text-white animate-fade-in-up relative overflow-hidden">
+          {/* Background pattern for the mission card */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-white rounded-full transform translate-x-16 -translate-y-16"></div>
+            <div className="absolute bottom-0 left-0 w-24 h-24 bg-secondary rounded-full transform -translate-x-12 translate-y-12"></div>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center relative z-10">
             <div>
               <h3 className="text-3xl md:text-4xl font-bold mb-6">Our Mission</h3>
               <p className="text-lg leading-relaxed mb-6 opacity-90">
