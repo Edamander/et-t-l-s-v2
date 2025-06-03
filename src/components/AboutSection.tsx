@@ -27,19 +27,19 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-white relative overflow-hidden">
+    <section id="about" className="py-20 bg-white dark:bg-gray-900 relative overflow-hidden transition-colors duration-300">
       {/* Background Design Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Large background shapes */}
-        <div className="absolute -top-20 -left-20 w-80 h-80 bg-gradient-to-br from-primary/10 to-primary/5 rounded-full blur-2xl"></div>
-        <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-gradient-to-br from-secondary/15 to-secondary/5 rounded-full blur-2xl"></div>
+        <div className="absolute -top-20 -left-20 w-80 h-80 bg-gradient-to-br from-primary/10 to-primary/5 dark:from-primary/20 dark:to-primary/10 rounded-full blur-2xl"></div>
+        <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-gradient-to-br from-secondary/15 to-secondary/5 dark:from-secondary/25 dark:to-secondary/10 rounded-full blur-2xl"></div>
         
         {/* Decorative hexagons */}
-        <div className="absolute top-1/4 right-10 w-16 h-16 bg-secondary/10 transform rotate-12 rounded-lg"></div>
-        <div className="absolute bottom-1/4 left-10 w-12 h-12 bg-primary/15 transform -rotate-12 rounded-lg"></div>
+        <div className="absolute top-1/4 right-10 w-16 h-16 bg-secondary/10 dark:bg-secondary/20 transform rotate-12 rounded-lg"></div>
+        <div className="absolute bottom-1/4 left-10 w-12 h-12 bg-primary/15 dark:bg-primary/25 transform -rotate-12 rounded-lg"></div>
         
         {/* Floating dots pattern */}
-        <div className="absolute top-32 left-1/3 grid grid-cols-3 gap-2 opacity-20">
+        <div className="absolute top-32 left-1/3 grid grid-cols-3 gap-2 opacity-20 dark:opacity-30">
           <div className="w-2 h-2 bg-primary rounded-full"></div>
           <div className="w-2 h-2 bg-secondary rounded-full"></div>
           <div className="w-2 h-2 bg-primary rounded-full"></div>
@@ -51,11 +51,11 @@ const AboutSection = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6 transition-colors duration-300">
             About <span className="text-primary">ET Linguistic</span>
           </h2>
           <div className="w-24 h-1 bg-secondary mx-auto mb-8"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed transition-colors duration-300">
             We are a dedicated team of linguistic professionals committed to breaking down language barriers 
             and facilitating seamless communication across cultures. Our expertise spans translation, 
             interpretation, and comprehensive language solutions.
@@ -66,13 +66,13 @@ const AboutSection = () => {
           {features.map((feature, index) => (
             <div 
               key={index}
-              className="text-center p-6 rounded-xl bg-gradient-to-br from-primary/5 to-secondary/5 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:animate-float group"
+              className="text-center p-6 rounded-xl bg-gradient-to-br from-primary/5 to-secondary/5 dark:from-primary/10 dark:to-secondary/10 hover:shadow-lg dark:hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 hover:animate-float group border border-gray-100 dark:border-gray-800"
             >
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors group-hover:animate-pulse-gentle">
+              <div className="w-16 h-16 bg-primary/10 dark:bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 dark:group-hover:bg-primary/30 transition-colors group-hover:animate-pulse-gentle">
                 <feature.icon className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
-              <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 transition-colors duration-300">{feature.title}</h3>
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed transition-colors duration-300">{feature.description}</p>
             </div>
           ))}
         </div>

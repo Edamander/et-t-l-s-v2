@@ -120,7 +120,7 @@ const ResearchSection = () => {
               </div>
             </div>
             <div className="relative">
-              <div className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-xl p-8 text-center animate-float-delayed relative overflow-hidden border border-gray-200/50 dark:border-gray-700/50 transition-all duration-300">
+              <div className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-xl p-8 text-center hover:animate-float-delayed relative overflow-hidden border border-gray-200/50 dark:border-gray-700/50 transition-all duration-300">
                 {/* Stats card decoration */}
                 <div className="absolute top-0 right-0 w-12 h-12 bg-gradient-to-br from-primary/20 to-secondary/20 dark:from-primary/30 dark:to-secondary/30 rounded-full transform translate-x-6 -translate-y-6"></div>
                 
