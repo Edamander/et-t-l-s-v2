@@ -20,7 +20,7 @@ export const useContactForm = () => {
     
     try {
       const { error } = await supabase
-        .from('form_submissions')
+        .from('Form_submissions')
         .insert([
           {
             name: `${data.firstName} ${data.lastName}`,
