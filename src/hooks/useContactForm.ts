@@ -21,9 +21,9 @@ export const useContactForm = () => {
     try {
       console.log('Submitting form data:', data);
       
-      // First, save to database
+      // First, save to database using the correct table name (lowercase)
       const { error: dbError } = await supabase
-        .from('Form_submissions')
+        .from('form_submissions')
         .insert([
           {
             name: `${data.firstName} ${data.lastName}`,
