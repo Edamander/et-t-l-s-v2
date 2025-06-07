@@ -77,10 +77,10 @@ const handler = async (req: Request): Promise<Response> => {
       `,
     });
 
-    // Send notification email to business owner
+    // Send notification email to your business email
     const adminEmailResponse = await resend.emails.send({
       from: "ET Linguistic Contact Form <onboarding@resend.dev>",
-      to: ["info@etlinguistic.com"], // Replace with your actual business email
+      to: ["egyed.tamas456@gmail.com"], // Updated to your specific email address
       subject: `New Contact Form Submission - ${serviceType || 'General Inquiry'}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">

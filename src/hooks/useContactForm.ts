@@ -19,6 +19,8 @@ export const useContactForm = () => {
     setIsSubmitting(true);
     
     try {
+      console.log('Submitting form data:', data);
+      
       // First, save to database
       const { error: dbError } = await supabase
         .from('Form_submissions')
@@ -26,16 +28,19 @@ export const useContactForm = () => {
           {
             name: `${data.firstName} ${data.lastName}`,
             email: data.email,
-            message: `Service Type: ${data.serviceType}\n\nMessage: ${data.message}`
+            message: `Service Type: ${data.serviceType || 'Not specified'}\n\nMessage: ${data.message}`
           }
         ]);
 
       if (dbError) {
+        console.error('Database error:', dbError);
         throw dbError;
       }
 
+      console.log('Form saved to database successfully');
+
       // Then, send emails via Edge Function
-      const { error: emailError } = await supabase.functions.invoke('send-contact-email', {
+      const { data: emailData, error: emailError } = await supabase.functions.invoke('send-contact-email', {
         body: {
           firstName: data.firstName,
           lastName: data.lastName,
@@ -53,6 +58,7 @@ export const useContactForm = () => {
           description: "We received your message. Email confirmation may be delayed.",
         });
       } else {
+        console.log('Emails sent successfully:', emailData);
         toast({
           title: "Message sent successfully!",
           description: "We'll get back to you as soon as possible. Check your email for confirmation.",
