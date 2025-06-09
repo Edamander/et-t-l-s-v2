@@ -249,7 +249,7 @@ const ContactSection = () => {
                     type="file"
                     onChange={handleFileChange}
                     className="hidden"
-                    accept=".pdf,.doc,.docx,.txt,.png,.jpg,.jpeg"
+                    accept=".pdf,.doc,.docx,.txt,.png,.jpg,.jpeg,.xls,.xlsx,.xlsm,.xlsb,.csv,.tsv,.tab,.ppt,.pptx,.pps,.ppsx,.key,.odp"
                   />
                   <button
                     type="button"
@@ -273,7 +273,7 @@ const ContactSection = () => {
                   )}
                 </div>
                 <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                  Supported formats: PDF, DOC, DOCX, TXT, PNG, JPG, JPEG (Max 10MB)
+                  Supported formats: PDF, DOC, DOCX, TXT, PNG, JPG, JPEG, Excel (XLS, XLSX, XLSM, XLSB), CSV, TSV, TAB, PowerPoint (PPT, PPTX, PPS, PPSX), Keynote (KEY), OpenOffice Presentation (ODP) (Max 10MB)
                 </p>
               </div>
               
