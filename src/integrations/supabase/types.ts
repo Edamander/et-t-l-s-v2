@@ -11,6 +11,7 @@ export type Database = {
     Tables: {
       form_submissions: {
         Row: {
+          attachment_url: string | null
           created_at: string
           email: string
           id: string
@@ -18,6 +19,7 @@ export type Database = {
           name: string
         }
         Insert: {
+          attachment_url?: string | null
           created_at?: string
           email: string
           id?: string
@@ -25,6 +27,7 @@ export type Database = {
           name: string
         }
         Update: {
+          attachment_url?: string | null
           created_at?: string
           email?: string
           id?: string

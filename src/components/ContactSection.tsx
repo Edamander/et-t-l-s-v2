@@ -1,21 +1,34 @@
-
-import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
+import React, { useState, useRef } from 'react';
+import { Mail, Phone, MapPin, Clock, Send, Paperclip, X } from 'lucide-react';
 import { useContactForm } from '@/hooks/useContactForm';
 
 const ContactSection = () => {
   const { submitForm, isSubmitting } = useContactForm();
+  const fileInputRef = useRef<HTMLInputElement>(null);
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
     email: '',
     serviceType: '',
-    message: ''
+    message: '',
+    attachment: null as File | null
   });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0] || null;
+    setFormData(prev => ({ ...prev, attachment: file }));
+  };
+
+  const removeAttachment = () => {
+    setFormData(prev => ({ ...prev, attachment: null }));
+    if (fileInputRef.current) {
+      fileInputRef.current.value = '';
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -33,8 +46,12 @@ const ContactSection = () => {
         lastName: '',
         email: '',
         serviceType: '',
-        message: ''
+        message: '',
+        attachment: null
       });
+      if (fileInputRef.current) {
+        fileInputRef.current.value = '';
+      }
     }
   };
 
@@ -221,6 +238,43 @@ const ContactSection = () => {
                   placeholder="Tell us about your project requirements..."
                   required
                 ></textarea>
+              </div>
+
+              {/* File Attachment Section */}
+              <div className="relative z-10">
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Attach Sample File (Optional)</label>
+                <div className="flex items-center space-x-4">
+                  <input
+                    ref={fileInputRef}
+                    type="file"
+                    onChange={handleFileChange}
+                    className="hidden"
+                    accept=".pdf,.doc,.docx,.txt,.png,.jpg,.jpeg"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => fileInputRef.current?.click()}
+                    className="flex items-center space-x-2 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+                  >
+                    <Paperclip className="w-4 h-4" />
+                    <span className="text-sm">Choose File</span>
+                  </button>
+                  {formData.attachment && (
+                    <div className="flex items-center space-x-2 px-3 py-2 bg-primary/10 rounded-lg">
+                      <span className="text-sm text-gray-700 dark:text-gray-300">{formData.attachment.name}</span>
+                      <button
+                        type="button"
+                        onClick={removeAttachment}
+                        className="text-red-500 hover:text-red-700 transition-colors"
+                      >
+                        <X className="w-4 h-4" />
+                      </button>
+                    </div>
+                  )}
+                </div>
+                <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                  Supported formats: PDF, DOC, DOCX, TXT, PNG, JPG, JPEG (Max 10MB)
+                </p>
               </div>
               
               <button 
