@@ -15,14 +15,9 @@ const AboutSection = () => {
       description: "Rigorous quality control processes ensure accuracy and consistency"
     },
     {
-      icon: Globe,
-      title: "Global Reach",
-      description: "Supporting businesses and individuals across multiple languages and cultures"
-    },
-    {
       icon: BookOpen,
-      title: "Research Focus",
-      description: "Continuous improvement through linguistic research and methodology"
+      title: "Focus on Research",
+      description: "Continuous improvement through linguistic research and workflow optimization"
     }
   ];
 
@@ -52,13 +47,13 @@ const AboutSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6 transition-colors duration-300">
-            About <span className="text-primary">ET Linguistic</span>
+            About <span className="text-primary">E.T. Transylvania Linguistic Solutions</span>
           </h2>
           <div className="w-24 h-1 bg-secondary mx-auto mb-8"></div>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed transition-colors duration-300">
-            We are a dedicated team of linguistic professionals committed to breaking down language barriers 
+            We are a dedicated, "otherworldly" team of linguistic professionals committed to overcoming language barriers 
             and facilitating seamless communication across cultures. Our expertise spans translation, 
-            interpretation, and comprehensive language solutions.
+            interpretation, MTPE, and other comprehensive language solutions.
           </p>
         </div>
 
