@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { Mail, Phone, MapPin, Clock, Send, Paperclip, X } from 'lucide-react';
+import { Mail, Phone, Clock, Send, Paperclip, X } from 'lucide-react';
 import { useContactForm } from '@/hooks/useContactForm';
 
 const ContactSection = () => {
@@ -59,27 +59,15 @@ const ContactSection = () => {
     {
       icon: Mail,
       title: "Email",
-      info: "info@etlinguistic.com",
+      info: "egyed.tamas456@gmail.com",
       subInfo: "We respond within 24 hours"
     },
     {
       icon: Phone,
       title: "Phone",
-      info: "+1 (555) 123-4567",
-      subInfo: "Mon-Fri 9AM-6PM EST"
+      info: "+40 728 254 131",
+      subInfo: "Mon-Fri 8AM-5PM EET"
     },
-    {
-      icon: MapPin,
-      title: "Location",
-      info: "Professional Services Hub",
-      subInfo: "Global reach, local expertise"
-    },
-    {
-      icon: Clock,
-      title: "Response Time",
-      info: "Quick Turnaround",
-      subInfo: "Most projects within 48hrs"
-    }
   ];
 
   return (
@@ -150,13 +138,12 @@ const ContactSection = () => {
               </div>
               
               <div className="relative z-10">
-                <h4 className="text-xl font-bold mb-4">Why Choose ET Linguistic?</h4>
+                <h4 className="text-xl font-bold mb-4">Why Choose E.T. Transylvania Linguistic Solutions?</h4>
                 <ul className="space-y-2 text-sm opacity-90">
                   <li>• Professional certified translators</li>
                   <li>• Fast turnaround times</li>
                   <li>• Competitive pricing</li>
                   <li>• Quality guarantee</li>
-                  <li>• 24/7 customer support</li>
                 </ul>
               </div>
             </div>
@@ -164,7 +151,7 @@ const ContactSection = () => {
 
           {/* Contact Form */}
           <div className="animate-fade-in-up">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">Send us a Message</h3>
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">Request a Project</h3>
             <form onSubmit={handleSubmit} className="space-y-6 bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary"></div>
               <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-secondary/20 to-primary/20 rounded-full blur-sm"></div>
@@ -221,14 +208,16 @@ const ContactSection = () => {
                   <option value="Document Translation">Document Translation</option>
                   <option value="Interpretation Services">Interpretation Services</option>
                   <option value="Academic Translation">Academic Translation</option>
-                  <option value="Business Solutions">Business Solutions</option>
-                  <option value="Training & Consultation">Training & Consultation</option>
-                  <option value="Express Services">Express Services</option>
+                  <option value="Business Solutions">Machine Translation Post-Editing (MTPE)</option>
+                  <option value="Training & Consultation">Proofreading</option>
+                  <option value="Express Services">Creative Translation</option>
+                  <option value="Express Services">Subtitling</option>
+                  <option value="Express Services">Linguistic Quality Assurance (LQA)</option>
                 </select>
               </div>
               
               <div className="relative z-10">
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Message</label>
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Description</label>
                 <textarea 
                   rows={4}
                   name="message"
@@ -242,7 +231,7 @@ const ContactSection = () => {
 
               {/* File Attachment Section */}
               <div className="relative z-10">
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Attach Sample File (Optional)</label>
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Attach Sample File</label>
                 <div className="flex items-center space-x-4">
                   <input
                     ref={fileInputRef}
