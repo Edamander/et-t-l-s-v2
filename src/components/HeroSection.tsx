@@ -37,9 +37,9 @@ const HeroSection = () => {
         </div>
         
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-          <span className="text-primary">Translating</span>
-          <span className="text-gray-700">Across</span>
-          <span className="text-secondary">Universes</span>
+          <span className="text-primary">Translating </span>
+          <span className="text-gray-700">Across </span>
+          <span className="text-secondary">Universes </span>
         </h1>
         
         <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
