@@ -1,6 +1,6 @@
+
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import logo from '../../assets/logo.png'; // Adjust the path if you use a different file type or name
 
 const FloatingHeader = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,6 +30,7 @@ const FloatingHeader = () => {
     { id: 'research', label: 'Research' },
     { id: 'contact', label: 'Contact' }
   ];
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -52,9 +53,7 @@ const FloatingHeader = () => {
           </div>
 
           {/* Title in the center */}
-          <div
-            className="flex-1 flex justify-center"
-          >
+          <div className="flex-1 flex justify-center">
             <span
               className="text-2xl font-bold text-primary cursor-pointer animate-float text-center"
               onClick={() => scrollToSection('home')}
@@ -76,8 +75,6 @@ const FloatingHeader = () => {
               </button>
             ))}
           </nav>
-        </div>
-          </nav>
 
           {/* Mobile Menu Button */}
           <button
@@ -86,6 +83,8 @@ const FloatingHeader = () => {
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
+        </div>
+
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="md:hidden bg-white/95 backdrop-blur-lg rounded-lg mt-2 shadow-lg animate-fade-in-up">
