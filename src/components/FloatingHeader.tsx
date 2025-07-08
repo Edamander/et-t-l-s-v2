@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import logo from '../../assets/logo.png'; // Adjust the path if you use a different file type or name
 
 const FloatingHeader = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,26 +31,41 @@ const FloatingHeader = () => {
     { id: 'research', label: 'Research' },
     { id: 'contact', label: 'Contact' }
   ];
-
   return (
-    <header 
+    <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-white/95 backdrop-blur-lg shadow-lg' 
+        isScrolled
+          ? 'bg-white/95 backdrop-blur-lg shadow-lg'
           : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div 
-            className="text-2xl font-bold text-primary cursor-pointer animate-float"
-            onClick={() => scrollToSection('home')}
+          {/* Logo on the left */}
+          <div className="flex items-center min-w-[120px]">
+            <img
+              src={logo}
+              alt="E.T. Transylvania Linguistic Solutions Logo"
+              className="h-10 w-auto cursor-pointer animate-float"
+              onClick={() => scrollToSection('home')}
+              style={{ maxHeight: 40 }}
+            />
+          </div>
+
+          {/* Title in the center */}
+          <div
+            className="flex-1 flex justify-center"
           >
-            ET Linguistic
+            <span
+              className="text-2xl font-bold text-primary cursor-pointer animate-float text-center"
+              onClick={() => scrollToSection('home')}
+            >
+              E.T. Transylvania Linguistic Solutions
+            </span>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-8 min-w-[120px] justify-end">
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -61,6 +77,8 @@ const FloatingHeader = () => {
               </button>
             ))}
           </nav>
+        </div>
+          </nav>
 
           {/* Mobile Menu Button */}
           <button
@@ -69,8 +87,6 @@ const FloatingHeader = () => {
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
-        </div>
-
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="md:hidden bg-white/95 backdrop-blur-lg rounded-lg mt-2 shadow-lg animate-fade-in-up">
