@@ -7,14 +7,14 @@ const ServicesSection = () => {
     {
       icon: FileText,
       title: "Document Translation",
-      description: "Professional translation of legal, medical, technical, and business documents with certified accuracy.",
-      features: ["Legal Documents", "Medical Reports", "Technical Manuals", "Business Contracts"]
+      description: "Professional translation of legal, medical, technical, and business documents.",
+      features: ["Legal Documents", "Medical Reports", "Manuals", "Contracts"]
     },
     {
       icon: Mic,
       title: "Interpretation Services",
-      description: "Real-time interpretation for meetings, conferences, and events with skilled interpreters.",
-      features: ["Conference Interpretation", "Business Meetings", "Medical Interpretation", "Court Interpretation"]
+      description: "Real-time interpretation for meetings, conferences, and events with skilled interpreters remotely or in-person.",
+      features: ["Consecutive Interpretation", "Simultaneous Interpretation", "Over-the-phone Interpretation", "Relay Interpretation"]
     },
     {
       icon: BookOpen,
@@ -30,15 +30,15 @@ const ServicesSection = () => {
     },
     {
       icon: Users,
-      title: "Training & Consultation",
-      description: "Language training programs and consultation services for organizations and individuals.",
-      features: ["Language Training", "Cultural Consultation", "Communication Workshops", "Linguistic Analysis"]
+      title: "Consultation",
+      description: "Consultation services for organizations and individuals.",
+      features: ["Cultural Consultation", "Communication Workshops", "Linguistic Analysis"]
     },
     {
       icon: Zap,
       title: "Express Services",
       description: "Fast-track translation and interpretation services for urgent requirements.",
-      features: ["24-hour Delivery", "Rush Orders", "Emergency Interpretation", "Urgent Documents"]
+      features: ["Under 24-hour Delivery", "Rush Orders", "Emergency Interpretation", "Urgent Documents"]
     }
   ];
 
@@ -68,7 +68,7 @@ const ServicesSection = () => {
           <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed transition-colors duration-300">
             Comprehensive linguistic solutions tailored to meet your specific needs, 
-            from individual documents to large-scale international projects.
+            from individual documents to large-scale projects.
           </p>
         </div>
 
@@ -106,7 +106,7 @@ const ServicesSection = () => {
         </div>
 
         <div className="text-center mt-16">
-          <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg dark:shadow-2xl inline-block animate-float-delayed relative overflow-hidden border border-gray-100 dark:border-gray-700 transition-all duration-300">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg dark:shadow-2xl inline-block relative overflow-hidden border border-gray-100 dark:border-gray-700 transition-all duration-300 group hover:animate-float-delayed">
             {/* Decorative background for CTA */}
             <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-secondary/5 dark:from-primary/10 dark:to-secondary/10 opacity-50"></div>
             <div className="relative z-10">
