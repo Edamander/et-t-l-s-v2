@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import logo from '../../assets/logo.png'; // Adjust the path if you use a different file type or name
@@ -44,7 +43,7 @@ const FloatingHeader = () => {
           {/* Logo on the left */}
           <div className="flex items-center min-w-[120px]">
             <img
-              src={logo}
+              src="/logo.png"
               alt="E.T. Transylvania Linguistic Solutions Logo"
               className="h-10 w-auto cursor-pointer animate-float"
               onClick={() => scrollToSection('home')}
