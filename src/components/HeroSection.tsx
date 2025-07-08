@@ -37,15 +37,13 @@ const HeroSection = () => {
         </div>
         
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-          <span className="text-primary">Expert Translation</span>
-          <br />
-          <span className="text-gray-700">&</span>
-          <br />
-          <span className="text-secondary">Language Services</span>
+          <span className="text-primary">Translating</span>
+          <span className="text-gray-700">Across</span>
+          <span className="text-secondary">Universes</span>
         </h1>
         
         <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-          Bridging cultures through precise, professional translation and comprehensive linguistic solutions
+          Your Transylvanian Translation Partner
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -53,7 +51,7 @@ const HeroSection = () => {
             onClick={() => scrollToSection('services')}
             className="px-8 py-4 bg-primary text-white font-semibold rounded-full hover:bg-primary/90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
           >
-            Explore Services
+            Explore Our Services
           </button>
           <button 
             onClick={() => scrollToSection('contact')}
