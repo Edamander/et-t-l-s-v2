@@ -22,9 +22,9 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-2xl font-bold mb-4">ET Linguistic</h3>
+              <h3 className="text-2xl font-bold mb-4">E.T. Transylvania Linguistic Solutions</h3>
               <p className="text-primary-foreground/80 leading-relaxed">
-                Professional translation and linguistic services connecting cultures through language.
+                Translating Across Universes
               </p>
             </div>
             <div>
@@ -39,15 +39,17 @@ const Index = () => {
             <div>
               <h4 className="text-lg font-semibold mb-4">Services</h4>
               <ul className="space-y-2 text-primary-foreground/80">
-                <li>Document Translation</li>
-                <li>Interpretation</li>
-                <li>Academic Translation</li>
-                <li>Business Solutions</li>
+                <li><a href="#services" className="hover:text-white transition-colors">Document Translation</a></li>
+                <li><a href="#services" className="hover:text-white transition-colors">Interpretation</a></li>
+                <li><a href="#services" className="hover:text-white transition-colors">Academic Translation</a></li>
+                <li><a href="#services" className="hover:text-white transition-colors">Business Solutions</a></li>
+                <li><a href="#services" className="hover:text-white transition-colors">Consultation</a></li>
+                <li><a href="#services" className="hover:text-white transition-colors">Express Services</a></li>
               </ul>
             </div>
           </div>
           <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-primary-foreground/60">
-            <p>&copy; 2024 ET Linguistic. All rights reserved.</p>
+            <p>&copy; 2023 E.T. Transylvania Linguistic Solutions. All rights reserved.</p>
           </div>
         </div>
       </footer>
