@@ -79,24 +79,21 @@ const AboutSection = () => {
             <div className="absolute bottom-0 left-0 w-24 h-24 bg-secondary rounded-full transform -translate-x-12 translate-y-12"></div>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center relative z-10">
-            <div>
-              <h3 className="text-3xl md:text-4xl font-bold mb-6">Our Mission</h3>
-              <p className="text-lg leading-relaxed mb-6 opacity-90">
-                To provide exceptional linguistic services that enable clear, accurate, and culturally 
-                sensitive communication. We believe that language is the bridge that connects people, 
-                ideas, and opportunities across the globe.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <span className="px-4 py-2 bg-white/20 rounded-full text-sm font-medium">Professional Excellence</span>
-                <span className="px-4 py-2 bg-white/20 rounded-full text-sm font-medium">Cultural Sensitivity</span>
-                <span className="px-4 py-2 bg-white/20 rounded-full text-sm font-medium">Timely Delivery</span>
-              </div>
-            </div>
-            <div className="relative group">
-              <div className="w-full h-64 bg-white/10 rounded-xl backdrop-blur-sm flex items-center justify-center group-hover:animate-float-delayed transition-all duration-300">
-                <Globe className="w-24 h-24 text-white opacity-60 group-hover:animate-pulse-gentle" />
-              </div>
+          <div className="relative z-10">
+            <h3 className="text-3xl md:text-4xl font-bold mb-6">Our Primary Directive</h3>
+            <p className="text-lg leading-relaxed mb-6 opacity-90">
+              To provide exceptional linguistic services that enable clear, accurate, and culturally 
+              sensitive communication. We believe that language is the bridge that connects people, 
+              ideas, and opportunities across the universe.
+            </p>
+            <p className="text-lg leading-relaxed mb-6 opacity-90">
+              We leverage industry-leading tools such as MemoQ, Smartcat, MS Office, SubtitleEdit, Canva, Figma, 
+              and other AI-driven technologies to enhance our translation and localization processes.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <span className="px-4 py-2 bg-white/20 rounded-full text-sm font-medium">Professional Excellence</span>
+              <span className="px-4 py-2 bg-white/20 rounded-full text-sm font-medium">Competitive Pricing</span>
+              <span className="px-4 py-2 bg-white/20 rounded-full text-sm font-medium">Timely Delivery</span>
             </div>
           </div>
         </div>
