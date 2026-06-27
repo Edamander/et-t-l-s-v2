@@ -18,7 +18,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <DarkModeToggle />
-        <BrowserRouter>
+        <BrowserRouter basename="/et-t-l-s-v2/">
           <Routes>
             <Route path="/" element={<Index />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
