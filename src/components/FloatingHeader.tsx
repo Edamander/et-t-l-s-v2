@@ -31,6 +31,8 @@ const FloatingHeader = () => {
     { id: 'contact', label: 'Contact' }
   ];
 
+  const logoSrc = `${import.meta.env.BASE_URL}logo.png`;
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -44,9 +46,9 @@ const FloatingHeader = () => {
           {/* Logo on the left */}
           <div className="flex items-center min-w-[120px]">
             <img
-              src="/logo.png"
+              src={logoSrc}
               alt="E.T. Transylvania Linguistic Solutions Logo"
-              className="h-10 w-auto cursor-pointer animate-float"
+              className="h-10 w-auto cursor-pointer"
               onClick={() => scrollToSection('home')}
               style={{ maxHeight: 40 }}
             />
@@ -55,7 +57,7 @@ const FloatingHeader = () => {
           {/* Title in the center */}
           <div className="flex-1 flex justify-center">
             <span
-              className="text-2xl font-bold text-primary cursor-pointer animate-float text-center"
+              className="text-2xl font-bold text-primary cursor-pointer text-center"
               onClick={() => scrollToSection('home')}
             >
               E.T. Transylvania Linguistic Solutions
